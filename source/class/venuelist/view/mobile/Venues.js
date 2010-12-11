@@ -65,11 +65,11 @@ qx.Class.define("venuelist.view.mobile.Venues", {
     // overridden
     _getServiceParams : function() 
     {
-		return {
-			"lat" : this.latitude,
-			"long" : this.longitude,
-			"q" : this.__searchField.value || ""
-		};
+      return {
+        "lat" : this.latitude || "49.879454",
+        "long" : this.longitude || "8.655551",
+        "q" : this.__searchField.value || ""
+      };
     },
     
     
@@ -78,8 +78,10 @@ qx.Class.define("venuelist.view.mobile.Venues", {
       console.debug("Got Data", data);
 
       try {
-        var list = data.query.results.venues.group[0].venue;
+        var group = data.query.results.venues.group;
+        var list = group.length != null ? group[0].venue : group.venue;
       } catch(ex) {
+        this.error("No data");
         var list = [];
       }
       
