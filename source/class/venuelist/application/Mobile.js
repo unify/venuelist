@@ -29,12 +29,11 @@ qx.Class.define("venuelist.application.Mobile",
       this.base(arguments);
 
       // Configure application
-      document.title = "venuelist";
+      document.title = "Foursquare Venue List";
 
       // Register views
       var ViewManager = unify.view.mobile.ViewManager.getInstance();
       ViewManager.add(venuelist.view.mobile.Start);
-      ViewManager.add(unify.view.mobile.SysInfo);
 
       // Initialize navigation
       unify.view.mobile.NavigationManager.getInstance().init();   
