@@ -77,7 +77,8 @@ qx.Class.define("venuelist.view.mobile.Venues", {
       
       layer.add(titlebar);
       
-      var content = this.__content = new unify.ui.mobile.Content;
+      var content = this.__content = new unify.ui.mobile.ScrollView;
+      content.setEnableScrollX(false);
       layer.add(content);
       
       var search = this.__searchField = document.createElement("input");
