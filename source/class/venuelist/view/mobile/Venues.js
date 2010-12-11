@@ -68,7 +68,7 @@ qx.Class.define("venuelist.view.mobile.Venues", {
       return {
         "lat" : this.latitude || "49.879454",
         "long" : this.longitude || "8.655551",
-        "q" : this.__searchField.value || ""
+        "q" : this.__searchField.value || " "
       };
     },
     
