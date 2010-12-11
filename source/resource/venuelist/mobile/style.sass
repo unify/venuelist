@@ -20,11 +20,15 @@
   +padded-layer
   +vbox
   
-  .title-bar
-    [exec=refresh]
-      +tool-bar-button-icon("icons-22/gear.png")
-  
-  
   .content > ul
     +navigation-list
 
+  input
+    +border-radius(10px)
+    padding: 8px 16px
+    display: block
+    width: 100%
+    font-size: 18px
+  
+  div[exec=refresh]
+    +content-button

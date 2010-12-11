@@ -74,7 +74,6 @@ qx.Class.define("venuelist.view.mobile.Venues", {
     {
       var layer = new unify.ui.mobile.Layer(this);
       var titlebar = new unify.ui.mobile.TitleBar(this);
-      titlebar.add({ icon : true, exec : "refresh", target : "right" });
       
       layer.add(titlebar);
       
