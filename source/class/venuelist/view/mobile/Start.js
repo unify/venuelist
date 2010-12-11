@@ -33,7 +33,9 @@ qx.Class.define("venuelist.view.mobile.Start", {
       layer.add(titlebar);
       
       var content = this.__content = new unify.ui.mobile.Content;
+      content.add("Select an option please!");
       content.add("<ul><li goto='venues'><label>Venues</label><hr/></li></ul>");
+	
       layer.add(content);
 
       return layer;
