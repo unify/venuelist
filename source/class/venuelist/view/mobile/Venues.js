@@ -8,10 +8,10 @@
  ************************************************************************ */
 
 /**
- * Start View
+ * Venues View
  */
-qx.Class.define("venuelist.view.mobile.Start", {
-  extend : unify.view.mobile.StaticView,
+qx.Class.define("venuelist.view.mobile.Venues", {
+  extend : unify.view.mobile.RemoteView,
   type : "singleton",
 
   members : 
@@ -21,7 +21,25 @@ qx.Class.define("venuelist.view.mobile.Start", {
 
     // overridden
     getTitle : function(type, param) {
-      return "Start";
+      return "Venues";
+    },
+    
+    
+    // overridden
+    _getBusinessObject : function() {
+      return venuelist.business.Foursquare.getInstance();
+    },
+    
+
+    // overridden
+    _getServiceName : function() {
+      return "venues";
+    },
+
+
+    // overridden
+    _getServiceParams : function() {
+      return {};
     },
 
     
@@ -33,7 +51,7 @@ qx.Class.define("venuelist.view.mobile.Start", {
       layer.add(titlebar);
       
       var content = this.__content = new unify.ui.mobile.Content;
-      content.add("<ul><li goto='venues'><label>Venues</label><hr/></li></ul>");
+      content.add("TODO");
       layer.add(content);
 
       return layer;

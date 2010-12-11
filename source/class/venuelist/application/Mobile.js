@@ -34,6 +34,7 @@ qx.Class.define("venuelist.application.Mobile",
       // Register views
       var ViewManager = unify.view.mobile.ViewManager.getInstance();
       ViewManager.add(venuelist.view.mobile.Start);
+      ViewManager.add(venuelist.view.mobile.Venues);
 
       // Initialize navigation
       unify.view.mobile.NavigationManager.getInstance().init();   
